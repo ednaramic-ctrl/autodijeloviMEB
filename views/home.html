@@ -1,0 +1,126 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Dijelovi</title>
+    <link rel="stylesheet" href="...frontend/css/style.css">
+</head>
+<section class="hero">
+    <span class="hero-label">KVALITET • SIGURNOST • POUZDANOST</span>
+    <h1>Sve za tvoje vozilo.<br><span>Na jednom mjestu.</span></h1>
+    <p>Pronađi kvalitetne autodijelove za svoje vozilo po pristupačnim cijenama.</p>
+    <a href="#products" class="button">Pregledaj proizvode →</a>
+</section>
+
+<h2 class="section-title">Zašto odabrati nas?</h2>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #263445;
+}
+
+.hero {
+    background: #101923;
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: white;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #d5dce5;
+}
+
+.button {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.features, .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1 1 220px;
+    box-shadow: 0 3px 10px #0001;
+}
+
+h2 {
+    color: #20364b;
+}
+</style>
+<div class="features">
+    <div class="card">
+        <div class="feature-icon">⚙️</div>
+        <h3>Kvalitetni dijelovi</h3>
+        <p>Veliki izbor dijelova za tvoje vozilo.</p>
+    </div>
+
+    <div class="card">
+        <div class="feature-icon">💰</div>
+        <h3>Povoljne cijene</h3>
+        <p>Kvalitetni proizvodi po dobrim cijenama.</p>
+    </div>
+
+    <div class="card">
+        <div class="feature-icon">🚘</div>
+        <h3>Različite marke</h3>
+        <p>Dijelovi za različite modele automobila.</p>
+    </div>
+</div>
+
+<h2 class="section-title">Izdvojeni proizvodi</h2>
+
+<div class="products">
+    <div class="card product-card">
+        <div class="product-image">⚙️</div>
+        <h3>Kočione pločice</h3>
+        <p class="price">45 KM</p>
+        <a href="#products" class="button">Pogledaj</a>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">🔧</div>
+        <h3>Filter ulja</h3>
+        <p class="price">12 KM</p>
+        <a href="#products" class="button">Pogledaj</a>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">🔋</div>
+        <h3>Akumulator</h3>
+        <p class="price">120 KM</p>
+        <a href="#products" class="button">Pogledaj</a>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Pronađi odgovarajući dio</h2>
+    <p>Provjeri kompatibilnost dijelova sa svojim vozilom.</p>
+    <a href="#api" class="button">Provjeri vozilo</a>
+</div>
+<main id="app"></main>
+
+<script src="./js/app.js"></script>

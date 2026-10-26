@@ -1,0 +1,95 @@
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #263445;
+}
+
+h1, h2 {
+    color: #20364b;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1 1 220px;
+    box-shadow: 0 3px 10px #0001;
+}
+
+.product-card p {
+    color: #718096;
+}
+
+button, .button {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+</style>
+<h1>Naši proizvodi</h1>
+<p>Pregledaj ponudu autodijelova.</p>
+
+<div class="products">
+    <div class="card product-card">
+        <div class="product-image">⚙️</div>
+        <h3>Kočione pločice</h3>
+        <p>Za sigurno kočenje.</p>
+        <p class="price">45 KM</p>
+        <button type="button" data-page="api">Provjeri kompatibilnost</button>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">🔧</div>
+        <h3>Filter ulja</h3>
+        <p>Zaštita motora.</p>
+        <p class="price">12 KM</p>
+        <button type="button" data-page="api">Provjeri kompatibilnost</button>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">🔋</div>
+        <h3>Akumulator</h3>
+        <p>Pouzdan start vozila.</p>
+        <p class="price">120 KM</p>
+        <button type="button" data-page="api">Provjeri kompatibilnost</button>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">💡</div>
+        <h3>Far za automobil</h3>
+        <p>Bolja vidljivost na cesti.</p>
+        <p class="price">75 KM</p>
+        <button type="button" data-page="api">Provjeri kompatibilnost</button>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">🛢️</div>
+        <h3>Motorno ulje</h3>
+        <p>Za održavanje motora.</p>
+        <p class="price">30 KM</p>
+        <button type="button" data-page="api">Provjeri kompatibilnost</button>
+    </div>
+
+    <div class="card product-card">
+        <div class="product-image">🛞</div>
+        <h3>Auto guma</h3>
+        <p>Stabilnost na cesti.</p>
+        <p class="price">100 KM</p>
+        <button type="button" data-page="api">Provjeri kompatibilnost</button>
+    </div>
+</div>

@@ -1,0 +1,186 @@
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.api-container {
+    max-width: 680px;
+    width: 92%;
+    margin: 40px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(16, 25, 35, 0.10);
+}
+
+.api-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.api-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8eef5;
+    border-radius: 18px;
+    font-size: 34px;
+}
+
+.api-header h2 {
+    color: #20364b;
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+
+.api-header p {
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.api-container label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #263445;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.api-container select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d5dce5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #263445;
+    font-size: 15px;
+    outline: none;
+}
+
+.api-container select:focus {
+    border-color: #20364b;
+    box-shadow: 0 0 0 3px rgba(32, 54, 75, 0.10);
+}
+
+.api-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.api-button:hover {
+    background: #c92d3a;
+}
+
+.api-notice {
+    margin-top: 25px;
+    padding: 16px;
+    background: #f1f4f8;
+    border-left: 4px solid #20364b;
+    border-radius: 7px;
+    color: #526174;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.api-container .message {
+    text-align: center;
+    margin-top: 15px;
+    color: #20364b;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+    .api-container {
+        padding: 23px;
+        margin: 25px auto;
+    }
+
+    .api-header h2 {
+        font-size: 23px;
+    }
+}
+</style>
+
+<div class="api-container">
+
+    <div class="api-header">
+        <div class="api-icon">🚘</div>
+        <h2>Provjera kompatibilnosti</h2>
+        <p>Odaberi svoje vozilo i pronađi odgovarajuće autodijelove.</p>
+    </div>
+
+    <form id="api-form">
+
+        <label for="brand">Marka vozila</label>
+        <select id="brand" required>
+            <option value="">Odaberi marku vozila</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Skoda">Škoda</option>
+            <option value="Opel">Opel</option>
+        </select>
+
+        <label for="model">Model vozila</label>
+        <select id="model" required>
+            <option value="">Odaberi model</option>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+            <option value="A6">A6</option>
+            <option value="Golf">Golf</option>
+            <option value="Passat">Passat</option>
+            <option value="Octavia">Octavia</option>
+            <option value="Serija 3">Serija 3</option>
+            <option value="C-Klasa">C-Klasa</option>
+        </select>
+
+        <label for="year">Godište vozila</label>
+        <select id="year" required>
+            <option value="">Odaberi godište</option>
+            <option value="2025">2025</option>
+            <option value="2020">2020</option>
+            <option value="2015">2015</option>
+            <option value="2010">2010</option>
+            <option value="2005">2005</option>
+            <option value="2000">2000</option>
+        </select>
+
+        <label for="part">Autodio koji tražiš</label>
+        <select id="part" required>
+            <option value="">Odaberi autodio</option>
+            <option value="Kočione pločice">Kočione pločice</option>
+            <option value="Filter ulja">Filter ulja</option>
+            <option value="Akumulator">Akumulator</option>
+            <option value="Farovi">Farovi</option>
+            <option value="Motorno ulje">Motorno ulje</option>
+            <option value="Auto gume">Auto gume</option>
+        </select>
+
+        <button type="submit" class="api-button">
+            Provjeri vozilo
+        </button>
+
+        <p class="message"></p>
+
+    </form>
+
+    <div class="api-notice">
+        <strong>Informacija:api ide s daljnjim instrukcijama</strong>
+
+</div>
+

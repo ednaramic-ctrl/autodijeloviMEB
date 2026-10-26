@@ -1,0 +1,98 @@
+
+<style>
+.profile-container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #263445;
+}
+
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.profile-card h2 {
+    color: #20364b;
+    text-align: center;
+}
+
+.profile-card h3 {
+    color: #20364b;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.profile-info p {
+    background: #f3f5f8;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.profile-button {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.profile-button:hover {
+    background: #c92d3a;
+}
+
+.profile-note {
+    background: #f3f5f8;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+    .profile-container {
+        padding: 10px;
+    }
+}
+</style>
+
+<div class="profile-container">
+
+    <div class="profile-card">
+        <h2>👤 Moj profil</h2>
+        <p style="text-align:center;">Dobro došli na Autodijelovi MEB!</p>
+
+        <h3>Podaci korisnika</h3>
+
+        <div class="profile-info">
+            <p><strong>Ime:</strong> Gost korisnik</p>
+            <p><strong>Email:</strong> Nije dostupna</p>
+            <p><strong>Status:</strong> Gost</p>
+            <p><strong>Broj narudžbi:</strong> 0</p>
+        </div>
+
+        <p style="font-size:14px; color:#718096;">
+            Podaci su trenutno primjeri jer profil nije povezan s bazom podataka.
+        </p>
+
+        <a href="#login" class="profile-button">Prijava</a>
+        <a href="#register" class="profile-button">Registracija</a>
+    </div>
+
+    <div class="profile-card">
+        <h3>Moje narudžbe</h3>
+
+        <div class="profile-note">
+            Trenutno nemate narudžbi.
+            <br>
+            <a href="#products" class="profile-button">Pogledaj proizvode</a>
+        </div>
+    </div>
+
+</div>
+
