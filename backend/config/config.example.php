@@ -6,5 +6,6 @@ return [
     'port' => '3306',
     'database' => 'autodijelovi',
     'username' => 'root',
-    'password' => ''
+    'password' => '',
+    'external_api_key' => ''
 ];

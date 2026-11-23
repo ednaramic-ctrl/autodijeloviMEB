@@ -1,0 +1,263 @@
+
+openapi: 3.0.0
+
+info:
+  title: Auto Parts API
+  description: API for Auto Parts Management System
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+
+paths:
+
+  /users:
+    get:
+      summary: Get all users
+      responses:
+        '200':
+          description: Users retrieved
+    post:
+      summary: Create user
+      responses:
+        '201':
+          description: User created
+        '400':
+          description: Invalid data
+
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: User found
+        '404':
+          description: User not found
+    put:
+      summary: Update user
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: User updated
+    delete:
+      summary: Delete user
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: User deleted
+
+  /categories:
+    get:
+      summary: Get all categories
+      responses:
+        '200':
+          description: Categories retrieved
+    post:
+      summary: Create category
+      responses:
+        '201':
+          description: Category created
+
+  /categories/{id}:
+    get:
+      summary: Get category by ID
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Category found
+        '404':
+          description: Category not found
+    put:
+      summary: Update category
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Category updated
+    delete:
+      summary: Delete category
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Category deleted
+
+  /products:
+    get:
+      summary: Get all products
+      responses:
+        '200':
+          description: Products retrieved
+    post:
+      summary: Create product
+      responses:
+        '201':
+          description: Product created
+        '400':
+          description: Invalid data
+
+  /products/{id}:
+    get:
+      summary: Get product by ID
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Product found
+        '404':
+          description: Product not found
+    put:
+      summary: Update product
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Product updated
+    delete:
+      summary: Delete product
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Product deleted
+
+  /orders:
+    get:
+      summary: Get all orders
+      responses:
+        '200':
+          description: Orders retrieved
+    post:
+      summary: Create order
+      responses:
+        '201':
+          description: Order created
+
+  /orders/{id}:
+    get:
+      summary: Get order by ID
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Order found
+    put:
+      summary: Update order
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Order updated
+    delete:
+      summary: Delete order
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Order deleted
+
+  /order_items:
+    get:
+      summary: Get all order items
+      responses:
+        '200':
+          description: Order items retrieved
+    post:
+      summary: Create order item
+      responses:
+        '201':
+          description: Order item created
+
+  /order_items/{id}:
+    get:
+      summary: Get order item by ID
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Order item found
+    put:
+      summary: Update order item
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Order item updated
+    delete:
+      summary: Delete order item
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Order item deleted
+
+  /vehicle_checks:
+    get:
+      summary: Get all vehicle checks
+      responses:
+        '200':
+          description: Vehicle checks retrieved
+    post:
+      summary: Create vehicle check
+      responses:
+        '201':
+          description: Vehicle check created
+
+  /vehicle_checks/{id}:
+    get:
+      summary: Get vehicle check by ID
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Vehicle check found
+    put:
+      summary: Update vehicle check
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Vehicle check updated
+    delete:
+      summary: Delete vehicle check
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Vehicle check deleted
+
+  /external/cars:
+    get:
+      summary: Search cars using External API
+      parameters:
+        - name: make
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: model
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Car information retrieved
+        '400':
+          description: Missing car make
+        '500':
+          description: External API error
+
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
